@@ -1,0 +1,117 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Mocap Controller.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(400, 560)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.runButton = QtWidgets.QPushButton(self.centralwidget)
+        self.runButton.setGeometry(QtCore.QRect(20, 20, 75, 23))
+        self.runButton.setObjectName("runButton")
+        self.stopButton = QtWidgets.QPushButton(self.centralwidget)
+        self.stopButton.setGeometry(QtCore.QRect(110, 20, 75, 23))
+        self.stopButton.setObjectName("stopButton")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setGeometry(QtCore.QRect(20, 265, 360, 181))
+        self.tabWidget.setObjectName("tabWidget")
+        self.Calibration = QtWidgets.QWidget()
+        self.Calibration.setObjectName("Calibration")
+        self.listWidget = QtWidgets.QListWidget(self.Calibration)
+        self.listWidget.setGeometry(QtCore.QRect(0, 0, 360, 126))
+        self.listWidget.setTabKeyNavigation(False)
+        self.listWidget.setObjectName("listWidget")
+        item = QtWidgets.QListWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsSelectable|QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled|QtCore.Qt.ItemIsTristate)
+        item.setCheckState(QtCore.Qt.Checked)
+        self.listWidget.addItem(item)
+        item = QtWidgets.QListWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsSelectable|QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled|QtCore.Qt.ItemIsTristate)
+        item.setCheckState(QtCore.Qt.Unchecked)
+        self.listWidget.addItem(item)
+        self.calibrateButton = QtWidgets.QPushButton(self.Calibration)
+        self.calibrateButton.setGeometry(QtCore.QRect(0, 132, 355, 23))
+        self.calibrateButton.setObjectName("calibrateButton")
+        self.tabWidget.addTab(self.Calibration, "")
+        self.treeWidget = QtWidgets.QTreeWidget(self.centralwidget)
+        self.treeWidget.setGeometry(QtCore.QRect(20, 50, 360, 200))
+        self.treeWidget.setObjectName("treeWidget")
+        item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 400, 21))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuEdit = QtWidgets.QMenu(self.menubar)
+        self.menuEdit.setObjectName("menuEdit")
+        self.menuOptions = QtWidgets.QMenu(self.menubar)
+        self.menuOptions.setObjectName("menuOptions")
+        self.menuHelp = QtWidgets.QMenu(self.menubar)
+        self.menuHelp.setObjectName("menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuEdit.menuAction())
+        self.menubar.addAction(self.menuOptions.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.runButton.setText(_translate("MainWindow", "Run"))
+        self.stopButton.setText(_translate("MainWindow", "Stop"))
+        __sortingEnabled = self.listWidget.isSortingEnabled()
+        self.listWidget.setSortingEnabled(False)
+        item = self.listWidget.item(0)
+        item.setText(_translate("MainWindow", "Npose + Walk (Recommended)"))
+        item = self.listWidget.item(1)
+        item.setText(_translate("MainWindow", "Npose Quick"))
+        self.listWidget.setSortingEnabled(__sortingEnabled)
+        self.calibrateButton.setText(_translate("MainWindow", "Calibrate"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Calibration), _translate("MainWindow", "Calibration"))
+        self.treeWidget.headerItem().setText(0, _translate("MainWindow", "Systems"))
+        self.treeWidget.headerItem().setText(1, _translate("MainWindow", "Fps"))
+        self.treeWidget.headerItem().setText(2, _translate("MainWindow", "Battery"))
+        self.treeWidget.headerItem().setText(3, _translate("MainWindow", "Status"))
+        __sortingEnabled = self.treeWidget.isSortingEnabled()
+        self.treeWidget.setSortingEnabled(False)
+        self.treeWidget.topLevelItem(0).setText(0, _translate("MainWindow", "Mocap Wireless"))
+        self.treeWidget.topLevelItem(0).child(0).setText(0, _translate("MainWindow", "Sensor 1 | Wrist Right"))
+        self.treeWidget.topLevelItem(0).child(0).setText(1, _translate("MainWindow", "20"))
+        self.treeWidget.topLevelItem(0).child(0).setText(2, _translate("MainWindow", "0.8"))
+        self.treeWidget.topLevelItem(0).child(0).setText(3, _translate("MainWindow", "RUN"))
+        self.treeWidget.topLevelItem(0).child(1).setText(0, _translate("MainWindow", "New Item"))
+        self.treeWidget.setSortingEnabled(__sortingEnabled)
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuEdit.setTitle(_translate("MainWindow", "Edit"))
+        self.menuOptions.setTitle(_translate("MainWindow", "Options"))
+        self.menuHelp.setTitle(_translate("MainWindow", "Help"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
