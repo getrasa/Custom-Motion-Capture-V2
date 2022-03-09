@@ -34,4 +34,4 @@ The system relies on 3 components hardware-wise:
 
 **Sensor Controller** is an application I wrote using python & pyQt. Its purpose is to display which sensors are connected, what's their frame rate and run state. It's also used for calibration and streaming data to Blender.
 
-**Server Receiver** is a python script run in Blender which reads sensory data through a local server and maps them to character armature. I've also attached few useful scripts for saving & loading animations to a separate file.
+**Server Receiver** is a python script run in Blender which reads sensory data through a local server and maps them to character armature. I've also attached a few useful scripts for saving & loading animations to a separate file.
