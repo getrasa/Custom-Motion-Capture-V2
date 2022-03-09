@@ -1,7 +1,7 @@
 # Custom Motion Capture
 ### Introduction
 This project started with me trying to prove to myself that I can build a motion capture suit on my own. But it ended up being probably the most challenging and satisfying project I've completed so far.
-The idea was to build a device which maps human body movements to a 3d model, wirelessly, and hopefully at a reasonable framerate.
+The idea was to build a device which maps human body movements to a 3d model - wirelessly and hopefully at a reasonable framerate.
 Luckily, this build manages to read 17 points/joints at a whopping speed of 50fps, fully wirelessly and I believe it should be able to run roughly 4-6 hours.
 
 
