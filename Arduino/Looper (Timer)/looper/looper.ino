@@ -6,25 +6,12 @@
 RF24 radio(7, 8); // CE, CSN
 byte address[6][6] = {"00000", "00001", "00010", "00011", "00100", "00101"};
 
-struct Data
-{
-  int8_t sensorId;
-  int8_t qW;
-  int8_t qX;
-  int8_t qY;
-  int8_t qZ;
-  int16_t aX;
-  int16_t aY;
-  int16_t aZ;
-};
-
 struct Request
 {
   int8_t sensorId = 0;
   char requestType = 'R';
 };
 
-Data data;
 Request request;
 
 int32_t time_start;
