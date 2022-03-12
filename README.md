@@ -7,7 +7,7 @@ Luckily, this build manages to read 17 points/joints at a whopping speed of 50fp
 
 
 ### Showcase
-Examples of the device in action.
+Examples of the device in action. (See Photos folder for more)
 ###### Example 1
 ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/21182768/157411346-16d4fb16-f659-4abd-ba81-64916bb2bffd.gif)
 
