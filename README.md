@@ -36,15 +36,15 @@ During the design process, I prioritized compactness. A small size was critical 
 
 
 <p float="left">
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/12b6be4e-470a-42ba-b54d-b895316d47b4" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/02835e01-70ef-4833-bed1-50f3205c672c" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/2db9c030-f9bd-4763-a94d-1dccb6a1efc2" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/838a2b6b-9093-455e-ab9d-de20589fcca8" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/ab9a52dc-1efd-40da-883a-8fff0a918135" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/552845e8-12a3-4481-8c90-a2015959bd43" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/25997b29-048d-4614-9fa8-ee2477a3a07e" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/db8a1d8c-758f-40cb-a36e-ad8aedbbaf90" width="33%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/622ade1c-9178-4b52-8a83-16190f56c364" width="33%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/12b6be4e-470a-42ba-b54d-b895316d47b4" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/02835e01-70ef-4833-bed1-50f3205c672c" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/2db9c030-f9bd-4763-a94d-1dccb6a1efc2" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/838a2b6b-9093-455e-ab9d-de20589fcca8" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/ab9a52dc-1efd-40da-883a-8fff0a918135" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/552845e8-12a3-4481-8c90-a2015959bd43" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/25997b29-048d-4614-9fa8-ee2477a3a07e" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/db8a1d8c-758f-40cb-a36e-ad8aedbbaf90" width="32%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/622ade1c-9178-4b52-8a83-16190f56c364" width="32%" />
 </p>
 
 > The finished sensors were small, compact, and could easily be attached to the subject with Velcro.
