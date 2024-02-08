@@ -69,7 +69,21 @@ Software had to be developed not only for the sensors but also for the following
 
 > A Synchronisation Looper, Antenna Receiver, and Sensor Manager App consecutively.
 
+### System Limitations
+Difficult to calibrate, drifts overtime, error of around 2-3 degrees.
 
+### Version 3?
+Works on Version 3 have already been in motion however due to a severe microcontroller shortage I'm having great difficulties in getting my hands on the required components. Without components, I can't build prototypes making it impossible to continue. Therefore, works on version 3 are on hold indefinitely.
+I will however post my progress in case someone is interested.
+
+Version 3 was not only gonna be wireless but also much smaller (50% size reduction) due to it being a custom designed PBC with surface mount components. I've made some progress but like I said, nothing can be proven without a working prototype. My first shoot at schematics and very crude component placement looks as follows. This is by no means a final product, just a prototype:
+<p float="left">
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/e376c53c-12de-48e5-ba64-f684a0b33a97" width="100%" />
+</p> 
+<p float="left">
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/04bfd11e-18ef-47a7-be55-5979e0813c9c" width="49%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/b35a9151-7bd2-494d-9aea-ab6afcc4a335" width="49%" />
+</p>  
 
 ### Summary
 The system relies on 3 components hardware-wise:
@@ -90,3 +104,6 @@ The system relies on 3 components hardware-wise:
 **Sensor Controller** is an application I wrote using python & pyQt. Its purpose is to display which sensors are connected, what's their frame rate and run state. It's also used for calibration and streaming data to Blender.
 
 **Server Receiver** is a python script run in Blender which reads sensory data through a local server and maps them to character armature. I've also attached a few useful scripts for saving & loading animations to a separate file.
+
+
+
