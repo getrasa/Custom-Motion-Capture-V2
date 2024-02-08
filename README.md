@@ -62,9 +62,9 @@ Software had to be developed not only for the sensors but also for the following
 - Antenna Receiver - Tasked with reading and forwarding sensor data to the a Sensor Manager App via serial bus.
 - Sensor Manager App - User interface for informing the user of what sensors are connected, how they performed, and for forwarding the data to clients via local server.
 <p float="left">
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/989ab4b0-fdba-4599-a558-9b12364c1bd2" width="31%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/10cb68d4-720b-44db-9643-a5b6b1751f6e" width="31%" />
-  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/5fa37d38-6a96-4b25-8744-c85b6a77d7e7" width="37.1%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/989ab4b0-fdba-4599-a558-9b12364c1bd2" width="30.5%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/10cb68d4-720b-44db-9643-a5b6b1751f6e" width="30.5%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/5fa37d38-6a96-4b25-8744-c85b6a77d7e7" width="36.5%" />
 </p>  
 
 > A Synchronisation Looper, Antenna Receiver, and Sensor Manager App consecutively.
