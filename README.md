@@ -48,6 +48,24 @@ During the design process, I prioritized compactness. A small size was critical 
 
 > The finished sensors were small, compact, and could easily be attached to the subject with Velcro.
 
+### Parts
+To reduce the price I sourced most of my parts from Aliexpress. The total price for all parts including spares came to around 300 aud:
+- 17x 16MHz Arduino Mini
+- 17x MPU 9250
+- 17x TP4056 Lithium Battery Charging Module
+- 17x 3.7v 500mAh Lithium Polymer Battery
+- 17x NRF24L01+ Small Module
+- 2x NRF24L01+ Larger with antenna
+- 1x Arduino UNO
+- 1x ESP32 Wroom
+
+<p float="left">
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/90930e70-26c4-474e-ae4c-f52c0983e818" width="99%" />
+</p>
+
+> Not all used components are on the photo 
+
+
 ### Software Implementation
 Software had to be developed not only for the sensors but also for the following:
 - Blender Character Script: A client which reads all broadcasted data by the server and maps sensor tilt to character bones in real-time.
