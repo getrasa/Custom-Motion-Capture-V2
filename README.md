@@ -1,8 +1,33 @@
-# Custom Motion Capture
+# Custom Motion Capture V2
+
+> Motion Capture V1 (wireless) vs Motion Capture V2 (wireless)
+
+<p float="left">
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/928f6361-6b4b-449d-99cb-8fa7410e9e91" width="73%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/4611d530-c071-47aa-912b-8a0bd0bb1ed1" width="26.3%" />
+</p>
+
+
+
+### Abstract
+Motion capture can be achieved using multiple different methods. One of the cheapest methods however is by the use of multiple 9-axis MEMS sensors attached to specific body parts. These sensors map their 'tilt' in world space to virtual characters body parts accurately approximating movement in 3D space. This README briefly describes my own design, hardware, and software implementation of this motion capture method. 
+
+
+
 ### Introduction
-This project started with me trying to prove to myself that I can build a motion capture suit on my own. But it ended up being probably the most challenging and satisfying project I've completed so far.
-The idea was to build a device which maps human body movements to a 3d model - wirelessly and hopefully at a reasonable framerate.
-Luckily, this build manages to read 17 points/joints at a whopping speed of 50fps, fully wirelessly and runs roughly 3-5 hours on a single charge.
+This project is a second, wireless, iteration of my previous Custom-Made Motion Capture system. The previous solution was wired, heavily bound by the limited computational power of an Arduino Uno and poor implementation of signal interrupts. It only managed to support 6 sensors at 10 fps which was far from practical and greatly failed to reach my expectations of a minimum 30fps threshold which is why the second version has been developed.
+
+Custom Motion Capture V2 consists of 17 sensors strategically placed on 17 locations on the body (inspired by XSense solution) capable of reading at a whopping speed of 50fps, fully wirelessly and runs roughly 3-5 hours on a single charge.
+##### Showcase
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/21182768/157411346-16d4fb16-f659-4abd-ba81-64916bb2bffd.gif" width="49%" />
+  <img src="https://user-images.githubusercontent.com/21182768/157413374-0a718f3c-9549-4cba-9a7f-0f41efe5849c.gif" width="49%" />
+</p>
+
+### Hardware Assembly Process
+After a working prototype has been finalized I proceeded to design a CAD design in Fusion 360. During the design process I prioritized compactness. Small size was critical to ensure that the device doesn't obstruct subject's movement. The solution I came up with was a 3 layer sandwich of trays which slid into a case one on top the other. Sitting at the very bottom was the battery, followed by the MEMS sensor neighboring a battery charger in the second layer, finishing with an 16Mhz and wireless antenna in the final layer. The position of the battery was crucial in order to minimize vibration as it was the heaviest part of the device. I also ensured the MEMS sensor is as close to the battery as it basically was the center of gravity for our tiny sensor. 
+
+The finished sensors were small and compact and could easily be attached to the subject with Velcro.
 
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/12b6be4e-470a-42ba-b54d-b895316d47b4" width="24.4%" />
@@ -15,23 +40,14 @@ Luckily, this build manages to read 17 points/joints at a whopping speed of 50fp
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/622ade1c-9178-4b52-8a83-16190f56c364" width="24.4%" />
 </p>
 
+### Software Implementation
+
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/5f511a91-fdc6-445d-b865-c5ed10683af1" width="73%" />
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/9d48632f-6be0-487f-b101-827367bc3f41" width="26%" />
 </p>
 
 
-
-
-
-
-### Showcase
-Examples of the device in action. (See Photos folder for more)
-##### Example 1
-![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/21182768/157411346-16d4fb16-f659-4abd-ba81-64916bb2bffd.gif)
-
-###### Example 2
-![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/21182768/157413374-0a718f3c-9549-4cba-9a7f-0f41efe5849c.gif)
 
 
 
