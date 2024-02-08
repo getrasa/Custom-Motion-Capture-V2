@@ -85,6 +85,13 @@ Version 3 was not only gonna be wireless but also much smaller (50% size reducti
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/b35a9151-7bd2-494d-9aea-ab6afcc4a335" width="49%" />
 </p>  
 
+The estimated specs of this systems are predicted to be:
+- Form factor reduced by 50% 
+- 0.5 degree of error
+- Easily 70fps bound only by wireless communication bandwidth. However, the device itself could definitely output twice as much.
+- 7 to 8 hours of battery life
+
+
 ### Summary
 The system relies on 3 components hardware-wise:
 - Sensors (17)
