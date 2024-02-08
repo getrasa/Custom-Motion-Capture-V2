@@ -1,16 +1,18 @@
 # Custom Motion Capture V2
 
-> Motion Capture V1 (wireless) vs Motion Capture V2 (wireless)
+### Abstract
+Motion capture can be achieved using multiple different methods. One of the cheapest methods however is by the use of multiple 9-axis MEMS sensors attached to specific body parts. These sensors map their 'tilt' in world space to virtual characters body parts accurately approximating movement in 3D space. This README briefly describes my own design, hardware, and software implementation of this motion capture method. 
+
+
 
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/928f6361-6b4b-449d-99cb-8fa7410e9e91" width="73%" />
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/4611d530-c071-47aa-912b-8a0bd0bb1ed1" width="26.3%" />
 </p>
 
+> Motion Capture V1 (wireless) vs Motion Capture V2 (wireless)
 
 
-### Abstract
-Motion capture can be achieved using multiple different methods. One of the cheapest methods however is by the use of multiple 9-axis MEMS sensors attached to specific body parts. These sensors map their 'tilt' in world space to virtual characters body parts accurately approximating movement in 3D space. This README briefly describes my own design, hardware, and software implementation of this motion capture method. 
 
 
 
