@@ -120,18 +120,18 @@ The system relies on 3 components hardware-wise:
 - Looper (Timer)
 
 ...and 2 software solutions:
-- Sensor Controller App
-- Server Receiver Script
+- Sensor Manager App
+- Blender Character Script
 
 **Sensor** reads its rotation (tilt) with respect to its initial orientation and then sends the data to the receiver as Quaternions. Local rotation is then translated to world rotation during software calibration.
 
 **Receiver** reads sensor data and passes them to the computer via serial port.
 
-**Looper** is ment to keep the sensors in sync so that radio signals don't overlap. Although the method is quite crude. Every 20 milliseconds the looper sends a signal to all sensors to begin sending data. Since each sensor has preassigned ID it begins waiting a hardcoded id * (x millis) amount of time for its turn.
+**Looper** is ment to keep the sensors in sync so that radio signals don't overlap. Although the method is quite crude. Every 20 milliseconds the looper sends a signal to all sensors to begin sending data. Since each sensor has a preassigned ID it begins waiting a hardcoded id * (x millis) amount of time for its turn.
 
-**Sensor Controller** is an application I wrote using python & pyQt. Its purpose is to display which sensors are connected, what's their frame rate and run state. It's also used for calibration and streaming data to Blender.
+**Sensor Manager App** is an application I wrote using python & pyQt. Its purpose is to display which sensors are connected, what's their frame rate and run state. It's also used for calibration and streaming data to clients (Blender) via a local server.
 
-**Server Receiver** is a python script run in Blender which reads sensory data through a local server and maps them to character armature. I've also attached a few useful scripts for saving & loading animations to a separate file.
+**Blender Character Script** is a python script run in Blender which reads sensory data through a local server and maps them to character armature. I've also attached a few useful scripts for saving & loading animations to a separate file.
 
 
 
