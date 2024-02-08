@@ -23,6 +23,7 @@ This project is a second, wireless iteration of my previous custom-made motion c
 
 Custom Motion Capture V2 consists of 17 sensors strategically placed at 17 locations on the body (inspired by the Xsens solution), capable of reading at an impressive speed of 50 fps, fully wirelessly, and runs for roughly 3-5 hours on a single charge.
 ##### Showcase
+Giffs take quite a while to load...
 <p float="left">
   <img src="https://user-images.githubusercontent.com/21182768/157411346-16d4fb16-f659-4abd-ba81-64916bb2bffd.gif" width="99%" />
   <img src="https://user-images.githubusercontent.com/21182768/157413374-0a718f3c-9549-4cba-9a7f-0f41efe5849c.gif" width="99%" />
