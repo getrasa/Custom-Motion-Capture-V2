@@ -1,7 +1,7 @@
 # Custom Motion Capture V2
 
 ### Abstract
-Motion capture can be achieved using multiple different methods. One of the cheapest methods however is by the use of multiple 9-axis MEMS sensors attached to specific body parts. These sensors map their 'tilt' in world space to virtual characters body parts accurately approximating movement in 3D space. 
+Motion capture can be achieved using various methods. One of the most affordable, however, is by using multiple 9-axis MEMS sensors attached to strategic locations on the body. The data procured from these sensors are interpreted as orientation changes, or 'tilt', in world space, which then allows us to translate these tilts onto a virtual character's anatomy, accurately approximating movement in 3D space. 
 
 This README briefly describes my own **design, hardware, and software implementation** of this motion capture method.
 
@@ -19,9 +19,9 @@ This README briefly describes my own **design, hardware, and software implementa
 
 
 ### Introduction
-This project is a second, wireless, iteration of my previous Custom-Made Motion Capture system. The previous solution was wired, heavily bound by the limited computational power of an Arduino Uno and poor implementation of signal interrupts. It only managed to support 6 sensors at 10 fps which was far from practical and greatly failed to reach my expectations of a minimum 30fps threshold which is why the second version has been developed.
+This project is a second, wireless iteration of my previous custom-made motion capture system. The former solution was wired, constrained by the limited computational power of an Arduino Uno, and by a poor implementation of signal interrupts. It managed to support only 6 sensors at 10 fps, which was far from practical and fell short of my expectation for a minimum 30 fps threshold. This is why the second version has been developed.
 
-Custom Motion Capture V2 consists of 17 sensors strategically placed on 17 locations on the body (inspired by XSense solution) capable of reading at a whopping speed of 50fps, fully wirelessly and runs roughly 3-5 hours on a single charge.
+Custom Motion Capture V2 consists of 17 sensors strategically placed at 17 locations on the body (inspired by the Xsens solution), capable of reading at an impressive speed of 50 fps, fully wirelessly, and runs for roughly 3-5 hours on a single charge.
 ##### Showcase
 <p float="left">
   <img src="https://user-images.githubusercontent.com/21182768/157411346-16d4fb16-f659-4abd-ba81-64916bb2bffd.gif" width="49%" />
@@ -29,9 +29,9 @@ Custom Motion Capture V2 consists of 17 sensors strategically placed on 17 locat
 </p>
 
 ### Hardware Assembly Process
-After a working prototype has been finalized I proceeded to design a CAD design in Fusion 360.
+After finalizing a working prototype, I proceeded to design a CAD model in Fusion 360.
 
-During the design process I prioritized compactness. Small size was critical to ensure that the device doesn't obstruct subject's movement. The solution I came up with was a 3 layer sandwich of trays which slid into a case one on top the other. Sitting at the very bottom was the battery, followed by the MEMS sensor neighboring a battery charger in the second layer, finishing with an 16Mhz and wireless antenna in the final layer. The position of the battery was crucial in order to minimize vibration as it was the heaviest part of the device. I also ensured the MEMS sensor is as close to the battery as it basically was the center of gravity for our tiny sensor. 
+During the design process, I prioritized compactness. A small size was critical to ensure that the device didn't obstruct the subject's movement. The solution I came up with was a three-layer sandwich of trays that slid into a case, one on top of the other. Sitting at the very bottom was the battery, followed by the MEMS sensor next to a battery charger in the second layer, and finishing with a 16 MHz Arduino Mini and wireless antenna in the final layer. The position of the battery was crucial to minimize vibration as it was the heaviest part of the device. I also ensured the MEMS sensor was as close to the battery as possible, as it essentially was the center of gravity for our tiny sensor.
 
 
 
@@ -50,7 +50,7 @@ During the design process I prioritized compactness. Small size was critical to 
 
 ### Software Implementation
 Software had to be developed not only for the sensors but also for the following:
-- Blender Character Script - A client which reads all data broadcasted by the server and maps sensor tilt to character bones in real time.
+- Blender Character Script: A client which reads all broadcasted data by the server and maps sensor tilt to character bones in real-time.
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/5f511a91-fdc6-445d-b865-c5ed10683af1" width="73%" />
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/9d48632f-6be0-487f-b101-827367bc3f41" width="26%" />
@@ -58,9 +58,9 @@ Software had to be developed not only for the sensors but also for the following
 
 > Blender script which fetches sensor values from a local server and maps them to character bones. 
 
-- Synchronisation Looper - An external clock running at 50 fps which broadcasted a "Start of the frame" signal to all connected devices. It's purpose was to ensured that all devices worked in synch and didn't overlap each other.
-- Antenna Receiver - Tasked with reading and forwarding sensor data to the a Sensor Manager App via serial bus.
-- Sensor Manager App - User interface for informing the user of what sensors are connected, how they performed, and for forwarding the data to clients via local server.
+- Synchronization Looper: An external clock running at 50 fps which broadcasts a "Start of the frame" signal to all connected devices. Its purpose was to ensure that all devices worked in sync and didn't overlap each other.
+- Antenna Receiver: Tasked with reading and forwarding sensor data to the Sensor Manager App via a serial bus.
+- Sensor Manager App: A user interface for informing the user of what sensors are connected, how they are performing, and for forwarding the data to clients via a local server.
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/989ab4b0-fdba-4599-a558-9b12364c1bd2" width="30.5%" />
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/10cb68d4-720b-44db-9643-a5b6b1751f6e" width="30.5%" />
@@ -73,10 +73,11 @@ Software had to be developed not only for the sensors but also for the following
 Difficult to calibrate, drifts overtime, error of around 2-3 degrees.
 
 ### Version 3?
-Works on Version 3 have already been in motion however due to a severe microcontroller shortage I'm having great difficulties in getting my hands on the required components. Without components, I can't build prototypes making it impossible to continue. Therefore, works on version 3 are on hold indefinitely.
-I will however post my progress in case someone is interested.
+Work on Version 3 has already begun; however, due to a severe microcontroller shortage, I am having great difficulties acquiring the required components. Without components, I can't build prototypes, making it impossible to continue. Therefore, work on Version 3 is on hold indefinitely.
 
-Version 3 was not only gonna be wireless but also much smaller (50% size reduction) due to it being a custom designed PBC with surface mount components. I've made some progress but like I said, nothing can be proven without a working prototype. My first shoot at schematics and very crude component placement looks as follows. This is by no means a final product, just a prototype:
+I will, however, post my progress in case someone is interested.
+
+Version 3 was not only going to be wireless but also much smaller (50% size reduction) due to it being a custom-designed PCB with surface-mounted components. I've made some progress but, as I said, nothing can be proven without a working prototype. My first shot at schematics and a very crude component placement looks as follows. This is by no means a final product, just a prototype.
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/e376c53c-12de-48e5-ba64-f684a0b33a97" width="100%" />
 </p> 
