@@ -1,7 +1,9 @@
 # Custom Motion Capture V2
 
 ### Abstract
-Motion capture can be achieved using multiple different methods. One of the cheapest methods however is by the use of multiple 9-axis MEMS sensors attached to specific body parts. These sensors map their 'tilt' in world space to virtual characters body parts accurately approximating movement in 3D space. This README briefly describes my own design, hardware, and software implementation of this motion capture method. 
+Motion capture can be achieved using multiple different methods. One of the cheapest methods however is by the use of multiple 9-axis MEMS sensors attached to specific body parts. These sensors map their 'tilt' in world space to virtual characters body parts accurately approximating movement in 3D space. 
+
+This README briefly describes my own **design, hardware, and software implementation** of this motion capture method.
 
 
 
@@ -27,9 +29,11 @@ Custom Motion Capture V2 consists of 17 sensors strategically placed on 17 locat
 </p>
 
 ### Hardware Assembly Process
-After a working prototype has been finalized I proceeded to design a CAD design in Fusion 360. During the design process I prioritized compactness. Small size was critical to ensure that the device doesn't obstruct subject's movement. The solution I came up with was a 3 layer sandwich of trays which slid into a case one on top the other. Sitting at the very bottom was the battery, followed by the MEMS sensor neighboring a battery charger in the second layer, finishing with an 16Mhz and wireless antenna in the final layer. The position of the battery was crucial in order to minimize vibration as it was the heaviest part of the device. I also ensured the MEMS sensor is as close to the battery as it basically was the center of gravity for our tiny sensor. 
+After a working prototype has been finalized I proceeded to design a CAD design in Fusion 360.
 
-The finished sensors were small and compact and could easily be attached to the subject with Velcro.
+During the design process I prioritized compactness. Small size was critical to ensure that the device doesn't obstruct subject's movement. The solution I came up with was a 3 layer sandwich of trays which slid into a case one on top the other. Sitting at the very bottom was the battery, followed by the MEMS sensor neighboring a battery charger in the second layer, finishing with an 16Mhz and wireless antenna in the final layer. The position of the battery was crucial in order to minimize vibration as it was the heaviest part of the device. I also ensured the MEMS sensor is as close to the battery as it basically was the center of gravity for our tiny sensor. 
+
+
 
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/12b6be4e-470a-42ba-b54d-b895316d47b4" width="24.4%" />
@@ -42,18 +46,32 @@ The finished sensors were small and compact and could easily be attached to the 
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/622ade1c-9178-4b52-8a83-16190f56c364" width="24.4%" />
 </p>
 
-### Software Implementation
+> The finished sensors were small, compact, and could easily be attached to the subject with Velcro.
 
+### Software Implementation
+Software had to be developed not only for the sensors but also for the following:
+- Blender Character Script - A client which reads all data broadcasted by the server and maps sensor tilt to character bones in real time.
 <p float="left">
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/5f511a91-fdc6-445d-b865-c5ed10683af1" width="73%" />
   <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/9d48632f-6be0-487f-b101-827367bc3f41" width="26%" />
-</p>
+</p>  
+
+> Blender script which fetches sensor values from a local server and maps them to character bones. 
+
+- Synchronisation Looper - An external clock running at 50 fps which broadcasted a "Start of the frame" signal to all connected devices. It's purpose was to ensured that all devices worked in synch and didn't overlap each other.
+- Antenna Receiver - Tasked with reading and forwarding sensor data to the a Sensor Manager App via serial bus.
+- Sensor Manager App - User interface for informing the user of what sensors are connected, how they performed, and for forwarding the data to clients via local server.
+<p float="left">
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/989ab4b0-fdba-4599-a558-9b12364c1bd2" width="31%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/10cb68d4-720b-44db-9643-a5b6b1751f6e" width="31%" />
+  <img src="https://github.com/getrasa/Custom-Motion-Capture/assets/21182768/5fa37d38-6a96-4b25-8744-c85b6a77d7e7" width="37.1%" />
+</p>  
+
+> A Synchronisation Looper, Antenna Receiver, and Sensor Manager App consecutively.
 
 
 
-
-
-### How it works?
+### Summary
 The system relies on 3 components hardware-wise:
 - Sensors (17)
 - Receiver
