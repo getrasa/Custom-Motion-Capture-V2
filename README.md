@@ -51,7 +51,7 @@ During the design process, I prioritized compactness. A small size was critical 
 > The finished sensors were small, compact, and could easily be attached to the subject with Velcro.
 
 ### Parts
-To reduce the price I sourced most of my parts from Aliexpress. The total price for all parts including spares came to around 300 aud:
+To reduce the costs I sourced most of my parts from Aliexpress. The total price for all parts including spares came to around 300 aud:
 - 17x 16MHz Arduino Mini
 - 17x MPU 9250
 - 17x TP4056 Lithium Battery Charging Module
